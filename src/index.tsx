@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/app/index';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { initializeIcons } from '@fluentui/font-icons-mdl2';
+initializeIcons();
 
-ReactDOM.render(
+ReactDOM.render( 
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>, 
   document.getElementById('root')
 );
 

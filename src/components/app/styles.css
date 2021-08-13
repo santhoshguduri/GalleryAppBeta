@@ -1,0 +1,15 @@
+
+  .headerContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+  }
+  
+  .headerContainer + .galleryContainer {
+    padding-top: 102px;
+  }
+  
+  .galleryContainer{
+    padding-top: 10px;
+  }
