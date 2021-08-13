@@ -38,14 +38,9 @@ export const ImageGallery = () => {
         // }
         // );
 
-        fetch('  https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=747f7c74ab5fe2e166b9a63ac20cd874&format=json&nojsoncallback=1', {
-            method: 'get',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        })
+        fetch('  https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=747f7c74ab5fe2e166b9a63ac20cd874&format=json&nojsoncallback=1')
             .then(response => {
-                console.log(response);
+                console.log(response.json());
                 sessionStorage.setItem('carId', JSON.stringify(response));
             })
             .catch(error => {
