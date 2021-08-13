@@ -38,21 +38,7 @@ export const ImageGallery = () => {
         // }
         // );
 
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            console.log(xhttp.responseText);
-            if (this.readyState == 4 && this.status == 200) {
-                // Typical action to be performed when the document is ready:
-            console.log(xhttp.responseText);
-                
-            } else {
-                console.log("error");
-                console.log(xhttp.onerror);
-            }
-        };
-        xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=747f7c74ab5fe2e166b9a63ac20cd874&format=json&nojsoncallback=1", true);
-        xhttp.send();
-        fetch('  https://cors-anywhere.herokuapp.com/https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=747f7c74ab5fe2e166b9a63ac20cd874&format=json&nojsoncallback=1', {
+        fetch('  https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=747f7c74ab5fe2e166b9a63ac20cd874&format=json&nojsoncallback=1', {
             method: 'get',
             headers: {
                 'Content-Type': 'application/json',
