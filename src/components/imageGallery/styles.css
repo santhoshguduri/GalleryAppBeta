@@ -1,0 +1,11 @@
+.loadMoreButtonContainer{
+    text-align: center;
+}
+
+.loadMoreButton{
+    margin: 20px;
+}
+
+.loadingSpinner{
+    margin-right: 10px;
+}

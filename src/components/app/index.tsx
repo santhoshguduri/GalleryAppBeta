@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './styles.css';
 import {Header} from '../header/index';
 import {ImageGallery} from '../imageGallery/index';
+import { Button } from "react-bootstrap";
 
 function App() {
 
   useEffect(() => {
       window.onscroll = function() {setHeaderFixed()};
   },[])
+
+  const [searchKey, setSearchKey] = useState<string>("");
 
   const setHeaderFixed = ()=>{
     var header: HTMLElement = document.getElementById("stickyHeader") as HTMLElement;
@@ -24,10 +27,10 @@ function App() {
     <div className="App">
       <div >
         <div className={`headerContainer`} id={`stickyHeader`}>
-            <Header />
+            <Header setSearchTag={(value) => setSearchKey(value)} />
         </div>
       <div className={`galleryContainer`}> 
-            <ImageGallery />
+            <ImageGallery searchTag={searchKey} />
       </div>
       </div>
     </div>
